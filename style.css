@@ -1,11 +1,21 @@
 #heading{
     font-size: large;
     font-weight: bolder;
-    color: greenyellow;
+    color: yellowgreen;
+}
+
+
+.heading-container{
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: brown;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
 }
 
 body{
-    background-color: #800080;
+    background-image: url('./Project\ Photos/Forest.jpg');
     text-indent: 0cqb;
     text-align: center;
     margin: 0;
