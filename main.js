@@ -177,6 +177,54 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
     question10();
 
+    // add keypress event listener for user to choose an answer by pressing enter on their keyboard
+    function addKeyboardNavigation() {
+        const options = document.querySelectorAll('.options li');
+        options.forEach(option => {
+            option.addEventListener('keypress', function(event) {
+                if (event.keyCode === 13) {
+                    handleOptionSelection(event.target);
+                }
+            });
+        });
+    }
+
+    function addKeyDownNavigation() {
+        const options = document.querySelectorAll('.options li');
+        options.forEach(option => {
+            option.addEventListener('keydown', function(event) {
+                if (event.keyCode === 40) {
+                    handleOptionSelection(event.target);
+                }
+            });
+        });
+    }
+
+    const correctAnswerIds = [
+        "option1-1",
+        "option2-3",
+        "option3-1",
+        "option4-5",
+        "option5-3",
+        "option6-3",
+        "option7-1",
+        "option8-2",
+        "option9-5",
+        "option10-3"
+     ]
+    
+     function handleOptionSelection(clickedOption) {
+        const clickedOptionId = clickedOption.id;
+        if (correctAnswerIds.includes(clickedOptionId)) {
+            clickedOption.innerHTML += ' <span style="color: green">&10004;</span>';
+        } else {
+            clickedOption.innerHTML += ' <span style="color: red">&#10008;</span>';
+        }
+
+    }
+    addKeyboardNavigation();
+    addKeyDownNavigation();
+
     const quizOptions = [
         { 
             question: "I am bordered by Mongolia, Russia, Kyrgyzstan in the North and Vietnam in the South. What is my capital city?",
@@ -247,4 +295,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         results.appendChild(yourScore);
     }
     myQuizResults();
-})
+
+    const submitButton = document.getElementById('submitButton');
+    submitButton.addEventListener('click', function() {
+        event.preventDefault();
+        myQuizResults();
+    });
+    
+
+});
+
+
