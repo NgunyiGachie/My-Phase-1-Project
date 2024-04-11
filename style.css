@@ -1,9 +1,9 @@
-#heading{
-    font-size: large;
-    font-weight: bolder;
-    color: yellowgreen;
+body{
+    background-image: url('./Project\ Photos/Forest.jpg');
+    text-align: center;
+    margin: 0;
+    justify-content: center;
 }
-
 
 .heading-container{
     border: 2px solid #333;
@@ -12,30 +12,17 @@
     max-width: 600px;
     width: 100%;
     margin: auto;
+    font-size: large;
+    font-weight: bolder;
+    color: yellowgreen;
 }
 
-body{
-    background-image: url('./Project\ Photos/Forest.jpg');
-    text-indent: 0cqb;
-    text-align: center;
-    margin: 0;
-    justify-content: center;
+#question{
+    text-align: left;
+    font-size: large;
+    font-weight: 800;
 }
-
-.quiz-container{
-    border: 2px solid #333;
-    padding: 20px;
-    background-color: beige;
-    max-width: 600px;
-    width: 100%;
-    margin: auto;
-}
-
-.question{
-    margin-bottom: 20px;
-}
-
-.question img{
+.question-image{
     width: 700px;
     height: 439px;
     max-width: 100%;
@@ -43,35 +30,77 @@ body{
     border-bottom: 2px solid #333;
 }
 
-.options li{
-    list-style-type: none;
-    margin-bottom: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0, 1);
-    cursor: pointer;
-}
 
-.results-container{
-    margin-top: 20px;
-    text-align: center;
+.quiz-container{
+    font-size: 25px;
     border: 2px solid #333;
     padding: 20px;
-    background-color: brown;
+    font-weight: 800;
+    background-color: beige;
     max-width: 600px;
     width: 100%;
     margin: auto;
 }
 
-
-ul{
-    padding: 0px;
-    list-style-type: none;
-    font-weight: lighter;
-    text-align: center;
+#answers{
+    font-weight: 800;
 }
 
+.option{
+    color: #222;
+    font-weight: 500;
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.option.hovered{
+    background-color: #e0e0e0;
+}
 
-  
+.option:hover:not([disabled]){
+    background: gray;
+}
+.option:disabled{
+    cursor: no-drop;
+}
+
+#proceed-button{
+    text-align: center;
+    color: antiquewhite;
+    background: blueviolet;
+    cursor: pointer;
+    font-weight: 800;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px 0;
+    transition: 0.5s;
+    display: none;
+}
+
+.correct{
+    color: green;
+}
+
+.incorrect{
+    color: red;
+}
+.option.correct {
+    background-color: #4CAF50; /* Green background */
+    color: #fff; /* White text */
+}
+
+.option.incorrect{
+    background-color: red;
+    color:#fff;
+}
+
+.option.disabled {
+    opacity: 0.6; /* Dimmed appearance for disabled buttons */
+}

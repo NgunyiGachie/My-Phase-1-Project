@@ -5,70 +5,70 @@
         "id": 1,
         "question": "I am bordered by Mongolia, Russia, Kyrgyzstan in the North and Vietnam in the South. What is my capital city?",
         "image": "./Project Photos/Beijing.jpg", 
-        "options": ["Beijing", "Pyongyang", "Hanoi", "Seoul", "Kabul"],
+        "answers": ["Beijing", "Pyongyang", "Hanoi", "Seoul", "Kabul"],
         "correctAnswer": "Beijing"
     },
     {
         "id": 2,
         "question": "I am bordered by every South American country except Chile. What is my capital city?",
         "image": "./Project Photos/SouthAmerica.jpg",
-        "options": ["Buenos Aires", "Bogota", "Brasilia", "Rio De Janeiro", "Montevideo"],
+        "answers": ["Buenos Aires", "Bogota", "Brasilia", "Rio De Janeiro", "Montevideo"],
         "correctAnswer": "Brasilia"
     },
     {
         "id": 3,
         "question": "I am bordered by Singapore, Phillipines, and India. I am renowned for having the largest coastline in the world. What is my capital city?",
         "image": "./Project Photos/Indian Ocean.jpg",
-        "options": ["Jakarta", "Moresby", "Canberra", "Kuala Lumpur", "Bangkok"],
+        "answers": ["Jakarta", "Moresby", "Canberra", "Kuala Lumpur", "Bangkok"],
         "correctAnswer": "Jakarta"
     },
     {
         "id": 4,
         "question": "I am bordered by the Atlantic Ocean, Algeria, and Mali. I am also host to a geographical pecularity called the 'Eye of the Sahara'. What is my capital city?",
         "image": "./Project Photos/Mauritania.jpg",
-        "options": ["Tripoli", "Rabat", "Dakar", "Tunis", "Nouakchott"],
+        "answers": ["Tripoli", "Rabat", "Dakar", "Tunis", "Nouakchott"],
         "correctAnswer": "Nouakchott"
     },
     {
         "id": 5,
         "question": "I have no land border because I am an island nation. The capital of my nearest neighbor is Ottawa. What is my capital city?",
         "image": "./Project Photos/Greenland.jpg",
-        "options": ["Reykjavik", "Copenhagen", "Nuuk", "Torshavn", "Oslo"],
+        "answers": ["Reykjavik", "Copenhagen", "Nuuk", "Torshavn", "Oslo"],
         "correctAnswer": "Nuuk"
     },
     {
         "id": 6,
         "question": "My border in the North is the largest international border in the world. I also border two oceans in the East and West. What is my capital city?",
         "image": "./Project Photos/US.jpg",
-        "options": ["Ottawa", "Moscow", "Washington D.C.", "Mexico City", "Beijing"],
+        "answers": ["Ottawa", "Moscow", "Washington D.C.", "Mexico City", "Beijing"],
         "correctAnswer": "Washington D.C."
     },
     {
         "id": 7,
         "question": "I have the most country borders in Africa. I am also the continent's second largest country. What is my capital city?",
         "image": "./Project Photos/DRC.jpg",
-        "options": ["Kinshasa", "Algiers", "Khartoum", "Niamey", "Abuja"],     
+        "answers": ["Kinshasa", "Algiers", "Khartoum", "Niamey", "Abuja"],     
         "correctAnswer": "Kinshasa"
     },
     {
         "id": 8,
         "question": "I am somewhere between Asia and Europe. I also border the following seas: The Black Sea, The Mediterranian Sea, and The Aegean Sea. What is my capital city?",
         "image": "./Project Photos/Turkey.jpg",
-        "options": ["Athens", "Ankarra", "Riga", "Tbilisi", "Yerevan"],
+        "answers": ["Athens", "Ankarra", "Riga", "Tbilisi", "Yerevan"],
         "correctAnswer": "Ankarra"
     },
     {
         "id": 9,
         "question": "I am the most mountanious country in Europe. Two of my five borders are Italy and France. What is my capital city?",
         "image": "./Project Photos/Switzerland.jpg",
-        "options": ["Berlin", "Madrid", "London", "Vienna", "Bern"],
+        "answers": ["Berlin", "Madrid", "London", "Vienna", "Bern"],
         "correctAnswer": "Bern"
     },
     {
         "id": 10,
         "question": "I appear as an S shape on the map. I am bordered by China, Laos, and Cambodia. What is my capital city?",
         "image": "./Project Photos/Switzerland.jpg",
-        "options": ["Phnom Penh", "Bangkok", "Hanoi", "Seoul", "Tokyo"],
+        "answers": ["Phnom Penh", "Bangkok", "Hanoi", "Seoul", "Tokyo"],
         "correctAnswer": "Hanoi"
     }
 ]
