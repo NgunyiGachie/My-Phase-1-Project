@@ -1,75 +1,125 @@
 {
-"questions": [
-    
-    {
+    "questions": [
+      {
         "id": 1,
         "question": "I am bordered by Mongolia, Russia, Kyrgyzstan in the North and Vietnam in the South. What is my capital city?",
-        "image": "./Project Photos/Beijing.jpg", 
-        "answers": ["Beijing", "Pyongyang", "Hanoi", "Seoul", "Kabul"],
-        "correctAnswer": "Beijing"
-    },
-    {
+        "image": "./Project Photos/Beijing.jpg",
+        "answers": [
+          {"option": "Beijing", "correct": "true"},
+          {"option": "Pyongyang", "correct": "false"},
+          {"option": "Hanoi", "correct": "false"},
+          {"option": "Seoul", "correct": "false"},
+          {"option": "Kabul", "correct": "false"}
+        ]
+      },
+      {
         "id": 2,
         "question": "I am bordered by every South American country except Chile. What is my capital city?",
         "image": "./Project Photos/SouthAmerica.jpg",
-        "answers": ["Buenos Aires", "Bogota", "Brasilia", "Rio De Janeiro", "Montevideo"],
-        "correctAnswer": "Brasilia"
-    },
-    {
+        "answers": [
+          {"option": "Buenos Aires", "correct": "false"},
+          {"option": "Bogota", "correct": "false"},
+          {"option": "Brasilia", "correct": "true"},
+          {"option": "Rio De Janeiro", "correct": "false"},
+          {"option": "Montevideo", "correct": "false"}
+        ]
+      },
+      {
         "id": 3,
         "question": "I am bordered by Singapore, Phillipines, and India. I am renowned for having the largest coastline in the world. What is my capital city?",
-        "image": "./Project Photos/Indian Ocean.jpg",
-        "answers": ["Jakarta", "Moresby", "Canberra", "Kuala Lumpur", "Bangkok"],
-        "correctAnswer": "Jakarta"
-    },
-    {
+        "image": "./Project Photos/Indonesia.jpg",
+        "answers": [
+          {"option": "Jakarta", "correct": "true"},
+          {"option": "Moresby", "correct": "false"},
+          {"option": "Canberra", "correct": "false"},
+          {"option": "Kuala Lumpur", "correct": "false"},
+          {"option": "Bangkok", "correct": "false"}
+        ]
+      },
+      {
         "id": 4,
         "question": "I am bordered by the Atlantic Ocean, Algeria, and Mali. I am also host to a geographical pecularity called the 'Eye of the Sahara'. What is my capital city?",
         "image": "./Project Photos/Mauritania.jpg",
-        "answers": ["Tripoli", "Rabat", "Dakar", "Tunis", "Nouakchott"],
-        "correctAnswer": "Nouakchott"
-    },
-    {
+        "answers": [
+          {"option": "Tripoli", "correct": "false"},
+          {"option": "Rabat", "correct": "false"},
+          {"option": "Dakar", "correct": "false"},
+          {"option": "Tunis", "correct": "false"},
+          {"option": "Nouakchott", "correct": "true"}
+        ]
+      },
+      {
         "id": 5,
         "question": "I have no land border because I am an island nation. The capital of my nearest neighbor is Ottawa. What is my capital city?",
         "image": "./Project Photos/Greenland.jpg",
-        "answers": ["Reykjavik", "Copenhagen", "Nuuk", "Torshavn", "Oslo"],
-        "correctAnswer": "Nuuk"
-    },
-    {
+        "answers": [
+          {"option": "Reykjavik", "correct": "false"},
+          {"option": "Copenhagen", "correct": "false"},
+          {"option": "Nuuk", "correct": "true"},
+          {"option": "Torshavn", "correct": "false"},
+          {"option": "Oslo", "correct": "false"}
+        ]
+      },
+      {
         "id": 6,
         "question": "My border in the North is the largest international border in the world. I also border two oceans in the East and West. What is my capital city?",
-        "image": "./Project Photos/US.jpg",
-        "answers": ["Ottawa", "Moscow", "Washington D.C.", "Mexico City", "Beijing"],
-        "correctAnswer": "Washington D.C."
-    },
-    {
+        "image": "./Project Photos/U.S..jpg",
+        "answers": [
+          {"option": "Ottawa", "correct": "false"},
+          {"option": "Moscow", "correct": "false"},
+          {"option": "Washington D.C.", "correct": "true"},
+          {"option": "Mexico City", "correct": "false"},
+          {"option": "Beijing", "correct": "false"}
+        ]
+      },
+      {
         "id": 7,
         "question": "I have the most country borders in Africa. I am also the continent's second largest country. What is my capital city?",
         "image": "./Project Photos/DRC.jpg",
-        "answers": ["Kinshasa", "Algiers", "Khartoum", "Niamey", "Abuja"],     
-        "correctAnswer": "Kinshasa"
-    },
-    {
+        "answers": [
+          {"option": "Kinshasa", "correct": "true"},
+          {"option": "Algiers", "correct": "false"},
+          {"option": "Khartoum", "correct": "false"},
+          {"option": "Niamey", "correct": "false"},
+          {"option": "Abuja", "correct": "false"}
+        ]
+      },
+      {
         "id": 8,
         "question": "I am somewhere between Asia and Europe. I also border the following seas: The Black Sea, The Mediterranian Sea, and The Aegean Sea. What is my capital city?",
         "image": "./Project Photos/Turkey.jpg",
-        "answers": ["Athens", "Ankarra", "Riga", "Tbilisi", "Yerevan"],
-        "correctAnswer": "Ankarra"
-    },
-    {
+        "answers": [
+          {"option": "Athens", "correct": "false"},
+          {"option": "Ankara", "correct": "true"},
+          {"option": "Riga", "correct": "false"},
+          {"option": "Tbilisi", "correct": "false"},
+          {"option": "Yerevan", "correct": "false"}
+        ]
+      },
+      {
         "id": 9,
         "question": "I am the most mountanious country in Europe. Two of my five borders are Italy and France. What is my capital city?",
         "image": "./Project Photos/Switzerland.jpg",
-        "answers": ["Berlin", "Madrid", "London", "Vienna", "Bern"],
-        "correctAnswer": "Bern"
-    },
-    {
+        "answers": [
+          {"option": "Berlin", "correct": "false"},
+          {"option": "Madrid", "correct": "false"},
+          {"option": "London", "correct": "false"},
+          {"option": "Vienna", "correct": "false"},
+          {"option": "Bern", "correct": "true"}
+        ]
+      },
+      {
         "id": 10,
         "question": "I appear as an S shape on the map. I am bordered by China, Laos, and Cambodia. What is my capital city?",
-        "image": "./Project Photos/Switzerland.jpg",
-        "answers": ["Phnom Penh", "Bangkok", "Hanoi", "Seoul", "Tokyo"],
-        "correctAnswer": "Hanoi"
-    }
-]
-}
+        "image": "./Project Photos/Vietnam.jpg",
+        "answers": [
+          {"option": "Phnom Penh", "correct": "false"},
+          {"option": "Bangkok", "correct": "false"},
+          {"option": "Hanoi", "correct": "true"},
+          {"option": "Seoul", "correct": "false"},
+          {"option": "Tokyo", "correct": "false"}
+        ]
+      }
+    ]
+  }
+  

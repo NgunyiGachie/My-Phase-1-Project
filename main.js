@@ -1,5 +1,7 @@
-document.addEventListener("DOMContentLoaded", async (event) => {
+// load the DOM
+document.addEventListener("DOMContentLoaded", (event) => {
 
+    // initialize questions by providing the property and value of each.
     const questions = [
         { 
             question: "I am bordered by Mongolia, Russia, Kyrgyzstan in the North and Vietnam in the South. What is my capital city?",
@@ -114,6 +116,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         }
     ];
 
+    // fetch questions data from db.json file
     function fetchQuestions() {
         fetch('http://localhost:3001/questions')
         .then(response => {
@@ -130,13 +133,17 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             console.error('Error fetching data:', error);
         });
     }
+    // call function to enter question data in the array
+    fetchQuestions();
     
+    // initialize DOM elements
     const questionElements = document.getElementById('question');
     const answerContainer = document.getElementById('answers');
     const proceedButton = document.getElementById('proceed-button');
     let presentQuestionIndex = 0;
     let score = 0;
 
+    // function to initialize the quiz
     function beginQuiz() {
         presentQuestionIndex = 0;
         score = 0;
@@ -144,13 +151,15 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         showQuestion();
     }
     
+    // function displaying the present question
     function showQuestion() {
+        // eliminate previous options
         rePopulateOptions();
         let presentQuestion = questions[presentQuestionIndex];
         let questionNumber = presentQuestionIndex + 1;
-        questionElements.innerHTML = ''; // Clear the question container
+        questionElements.innerHTML = '';
     
-        // Display image if available
+        // Display image on each question
         if (presentQuestion.image) {
             const img = document.createElement("img");
             img.src = presentQuestion.image;
@@ -159,10 +168,12 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             questionElements.appendChild(img);
         }
     
+        // Display questions
         const questionText = document.createElement("div");
         questionText.innerHTML = questionNumber + ". " + presentQuestion.question;
         questionElements.appendChild(questionText);
     
+        // Display answers to each question
         presentQuestion.answers.forEach(answer => {
             const button = document.createElement("button");
             button.innerHTML = answer.option;
@@ -176,31 +187,37 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     }
     
 
+    // Function handling user answers
     function yourAnswer(e) {
         const selectedOption = e.target;
         const correctAnswer = selectedOption.dataset.correct === "true";
         if(correctAnswer) {
             selectedOption.classList.add("correct");
+            // increment the score
             score++
         } else{
             selectedOption.classList.add("incorrect")
         }
+        // Disable answer options and highlight the correct answer
         Array.from(answerContainer.children).forEach(button => {
             if(button.dataset.correct === "true") {
                 button.classList.add("correct");
             }
             button.disabled = true;
         });
+        // Display the proceed button
         proceedButton.style.display = "block";
     }
+    // Function to clear answer options in each question
     function rePopulateOptions() {
+        // Hide proceed button before an option is chosen
         proceedButton.style.display = "none";
         while(answerContainer.firstChild) {
             answerContainer.removeChild(answerContainer.firstChild);
         }
     }
 
-
+    // Function handling proceed button on quiz
     function activateProceedButton() {
         presentQuestionIndex++
         if(presentQuestionIndex < questions.length) {
@@ -210,20 +227,26 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         }
     }
 
+    // Function revealing user results
     function revealResults() {
         rePopulateOptions();
         questionElements.innerHTML = `Your quiz score is ${score} out of ${questions.length}`;
         proceedButton.textContent = "Retake Quiz";
+        // Display retake quiz button
         proceedButton.style.display = "block";
     }
 
-
+    // Event listener for the proceed button
     proceedButton.addEventListener('click', () => {
         if(presentQuestionIndex < questions.length) {
             activateProceedButton();
         } else{
+            // if the quiz is completed, begin quiz
             beginQuiz();
         }
+    });
+
+    // Event listener for Enter key press
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             if(presentQuestionIndex < questions.length) {
@@ -232,19 +255,21 @@ document.addEventListener("DOMContentLoaded", async (event) => {
                 beginQuiz();
             }
         }
-    })
+    });
+
+    // Event listener for mouseover option
     answerContainer.addEventListener('mouseover', (event) => {
         if (event.target.classList.contains('option')) {
             event.target.classList.add('hovered');
         }
     });
-    
+    // Event listener for mouseout option
     answerContainer.addEventListener('mouseout', (event) => {
         if (event.target.classList.contains('option')) {
             event.target.classList.remove('hovered');
         }
-    });    
-    })
+    });
+    // call function to begin quiz
     beginQuiz();
    
 });
