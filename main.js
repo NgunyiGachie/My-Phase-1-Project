@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
     // initialize questions by providing the property and value of each.
-    const questions = [
+    let questions = [
         { 
             question: "I am bordered by Mongolia, Russia, Kyrgyzstan in the North and Vietnam in the South. What is my capital city?",
             image: "./Project Photos/Beijing.jpg",
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // fetch questions data from db.json file
     function fetchQuestions() {
-        fetch('http://localhost:3001/questions')
+        fetch('http://localhost:3000/questions')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             return response.json();
         })
         .then(data => {
+            console.log("Fetched data:", data); // Log the fetched data for debugging
             questions = data;
             beginQuiz();
         })
@@ -133,6 +134,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             console.error('Error fetching data:', error);
         });
     }
+    
     // call function to enter question data in the array
     fetchQuestions();
     
